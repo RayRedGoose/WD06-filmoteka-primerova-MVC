@@ -6,6 +6,7 @@ $link = db_connect();
 
 require('models/movies.php');
 
+
 // UPDATE film data in DB
 if ( array_key_exists('update-movie', $_POST) ) {
 
@@ -27,6 +28,7 @@ if ( array_key_exists('update-movie', $_POST) ) {
 														$_POST['genre'],
 														$_POST['year'],
 														$_POST['description'],
+														$_POST['photo'],
 														$_GET['id']);
 
 		if ( $result ) {
@@ -39,9 +41,9 @@ if ( array_key_exists('update-movie', $_POST) ) {
 
 if ( @$_GET['action'] == 'delete') {
 
-	$reslut = movie_delete($link, $_GET['id']);
+	$result = movie_delete($link, $_GET['id']);
 
-	if ( $reslut ) {
+	if ( $result ) {
 		$resultInfo = "<p>Фильм был удален!</p>";
 	} else {
 		$resultError = "<p>Что то пошло не так.</p>";

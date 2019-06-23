@@ -7,10 +7,9 @@
 <div class="card mb-20">
 
 	<div class="row">
-		<div class="col">
-			<img src="<?=HOST?>/data/movies/14349.jpg" alt="">
+		<div class="col-auto">
+			<img src="<?=IMG_COVER_PATH?>/<?=$movie['photo']?>" alt="<?=movie['title']?>">
 		</div>
-
 		<div class="col">
 			<div class="card__header">
 				<h4 class="title-4"><?=$movie['title']?></h4>
