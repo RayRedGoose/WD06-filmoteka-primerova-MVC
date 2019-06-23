@@ -2,7 +2,7 @@
 
 require_once 'resize.php';
 function photoCreate()  {
-  if (isset($_FILES['photo']['name']) && $_FILES['photo']['tmp_name'] !="")   {
+  
     $fileName = $_FILES['photo']['name'];
     $fileTmpLoc = $_FILES['photo']['tmp_name'];
     $fileType = $_FILES['photo']['type'];
@@ -45,9 +45,8 @@ function photoCreate()  {
 
     $miniPhoto = make_thumb($uploadFile, $resizedFileMin, '140', '200');
     $coverPhoto = make_thumb($uploadFile, $resizedFileCover, '400', '600');
-
-    $photo = $db_file_name;
-    return $photo;
-  }
+    
+  return $db_file_name;
+  
 }
 ?>
