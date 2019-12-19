@@ -36,6 +36,9 @@
 					</div>
 				</div>
 				<textarea name="description" class="textarea mb-20" placeholder="Введите описание фильма"  style="height: 100px;"></textarea>
+				<div class="mb-20">
+					<input type="file" name="photo">
+				</div>
 				<input 	type="submit"
 								class="button"
 								value="Добавить"
